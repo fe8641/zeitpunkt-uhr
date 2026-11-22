@@ -196,7 +196,7 @@ footer a:hover{color:var(--ink)}
     <div class="box">
       <h2>Interesse an zeit.punkt.?</h2>
       <p>Ob für dein Zuhause, deinen Laden oder als Partner für die Produktion: Schreib uns, wir melden uns persönlich.</p>
-      <form class="form" id="form" action="https://formsubmit.co/kontakt@zeitpunkt-uhr.de" method="POST">
+      <form class="form" id="form" action="https://formsubmit.co/a894252b5d5ec26f0e62435ce2166afe" method="POST">
         <label>Name<input name="name" autocomplete="name" required></label>
         <label>E-Mail<input type="email" name="email" autocomplete="email" required></label>
         <label>Nachricht<textarea name="message" required></textarea></label>
@@ -269,7 +269,7 @@ footer a:hover{color:var(--ink)}
     e.preventDefault();
     var btn=form.querySelector('button');btn.disabled=true;
     status.className='status';status.textContent='Wird gesendet …';
-    fetch('https://formsubmit.co/ajax/kontakt@zeitpunkt-uhr.de',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+    fetch('https://formsubmit.co/ajax/a894252b5d5ec26f0e62435ce2166afe',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
       .then(function(r){return r.json().then(function(d){if(!r.ok||d.success==='false'||d.success===false)throw new Error(d.message||'Fehler');})})
       .then(function(){form.reset();status.className='status ok';status.textContent='Danke! Deine Nachricht ist angekommen, wir melden uns bald.';})
       .catch(function(){status.className='status err';status.textContent='Das hat nicht geklappt. Bitte schreib uns direkt an kontakt@zeitpunkt-uhr.de.';})
