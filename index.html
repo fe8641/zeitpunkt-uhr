@@ -258,7 +258,7 @@ footer a:hover{color:var(--ink)}
   var nowEl=document.getElementById('now');
   function tick(){
     var d=new Date(),h=d.getHours(),m=d.getMinutes(),s=d.getSeconds();
-    var idx=[(h%12)*5+Math.floor(m/12),m,s];
+    var idx=[(h%12)*5,m,s];
     idx.forEach(function(k,n){var p=pos(k,R);glow[n].setAttribute('cx',p[0].toFixed(2));glow[n].setAttribute('cy',p[1].toFixed(2))});
     nowEl.textContent='Gerade ist es '+String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+' Uhr';
   }
